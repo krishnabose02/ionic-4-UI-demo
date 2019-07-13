@@ -12,7 +12,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 })
 export class VideoListPage implements OnInit {
 subscription: any;
-rawData: any;
+rawData: string;
 currentFiles: any[];
 class: string;
   constructor(public location: Location,
@@ -21,10 +21,11 @@ class: string;
               private videoPlayer: VideoPlayer,
               private screenOrientation: ScreenOrientation) {
     this.platform.ready().then(() => {
+      this.rawData = '';
       this.readFiles('thinkzone');
-    }).catch(() => {
-      // this.rawData = 'platform not ready';
-      alert('platform not ready');
+    }).catch((err) => {
+      this.rawData = 'Files cannot be displayed as platform does not support the operation (' + err + ')';
+      // alert('platform not ready');
       this.currentFiles = [];
     });
   }
@@ -41,7 +42,7 @@ class: string;
         }
       }).catch((err) => {
         console.log(err);
-        alert('video playback interrupted ' + err);
+        // alert('video playback interrupted ' + err);
         if (this.screenOrientation.type !== prevType) {
           this.screenOrientation.lock(prevType);
           this.screenOrientation.unlock();
@@ -55,7 +56,7 @@ class: string;
   readFiles(folder: string) {
     // the code below is correct, above one if any should be removed
     this.file.listDir(this.file.externalRootDirectory, folder).then((res) => {
-      // this.rawData = JSON.stringify(res);
+      this.rawData = '';
       res = this.filterFiles(res);
       this.currentFiles = res;
       console.log(this.rawData);
@@ -86,7 +87,9 @@ class: string;
         newFiles.push(f);
       }
     });
-
+    if (newFiles === []) {
+      this.rawData = 'Found no files to play!';
+    }
     return newFiles;
   }
   ngOnInit() {

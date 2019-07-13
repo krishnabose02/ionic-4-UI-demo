@@ -8,7 +8,11 @@
 </ion-header>
 
 <ion-content>
-  <p *ngIf="currentFiles == null || currentFiles==[]">No Files found!</p>
+  <ion-card color='danger'>
+    <ion-card-header>
+        <p>{{rawData}}</p>
+    </ion-card-header>
+  </ion-card>
   <div style='display: flex;flex-flow: column;align-items: center;justify-content: flex-start;width: 100%'>
     <div (click)='playVideo(f)' class='video-tile' *ngFor="let f of currentFiles">
       <div class='video-play-button'>
