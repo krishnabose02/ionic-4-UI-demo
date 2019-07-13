@@ -1,0 +1,26 @@
+.video-tile{
+    width: 90%;
+    height: 60px;
+    border-radius: 200px;
+    background: #f06292;
+    margin: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 10px 20px #f0629230, 0 6px 6px #f062923b;
+}
+
+.video-play-button{
+    margin: 10px;
+    background: #f8bbd0;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}

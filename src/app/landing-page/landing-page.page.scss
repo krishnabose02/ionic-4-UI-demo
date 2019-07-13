@@ -1,0 +1,39 @@
+.tile-info {
+    --color-activated: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    overflow: hidden;
+    height: 100px;
+    margin-top: 20px;
+    position: relative;
+    background: #e040fb;
+    color: white;
+    border-radius: 10px;
+    min-height: 20%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  .tile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    width: 75%;
+    height: 20%;
+    border-radius: 20px;
+    // box-shadow: 0 10px 20px rgba(234, 170, 98, 0.188), 0 6px 6px #eaaa623b;
+  }
+
+  .iconbg{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    border-radius: 20px;
+  }

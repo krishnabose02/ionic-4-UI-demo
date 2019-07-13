@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-row>
+      <ion-back-button></ion-back-button>
+        <ion-title>My Videos</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p *ngIf="currentFiles == null || currentFiles==[]">No Files found!</p>
+  <div style='display: flex;flex-flow: column;align-items: center;justify-content: flex-start;width: 100%'>
+    <div (click)='playVideo(f)' class='video-tile' *ngFor="let f of currentFiles">
+      <div class='video-play-button'>
+        <ion-icon style="color: white" name="play"></ion-icon>
+      </div>
+      <p style='color: white;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;margin-right: 20px'>{{f.name}}</p>
+    </div>
+  </div>
+</ion-content>

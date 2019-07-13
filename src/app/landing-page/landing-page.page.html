@@ -1,0 +1,56 @@
+<ion-menu menuClose side="start" content-id="content">
+    <ion-header >
+        <ion-toolbar>
+          <ion-title>Welcome, user!</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            My Dashboard
+          </ion-item>
+          <ion-item (click)='logout()'>
+            Log out
+          </ion-item>
+        </ion-list>
+      </ion-content>
+  </ion-menu>
+    <ion-header no-border>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>ThinkZone</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+<ion-content id='content'>
+  <!-- <div style='display: flex;flex-flow: row;flex-wrap: wrap;justify-content: space-evenly;align-items: center'>
+      <div (click)="goToModule(s.name)" fill='clear' class='tile-info' *ngFor="let s of subjects">
+          <b style="padding: 10px">{{s.name}}</b>
+      </div>
+  </div> -->
+  <div style='height: 100%;display: flex;flex-flow: column;justify-content: space-evenly;align-items: center'>
+    <div [routerLink]='s.page' *ngFor='let s of subjects' [style.background]='s.color' [style.boxShadow]='s.shadow' class='tile'>
+      <div class='iconbg' [style.background]='s.color_light'>
+        <ion-icon style="color: white; font-size: 2rem" [name]='s.icon'></ion-icon>
+      </div>
+      <p style='width: 50%;margin: 3px 0px 0px 20px;color: white'>{{s.display}}</p>
+      <ion-icon style="width: 20%;color: white;margin: auto" name='arrow-forward'></ion-icon>
+      <!-- </div> -->
+    </div>
+
+    <!-- <div style='background: #7cb8e8' class='tile'>
+      READ A PDF
+    </div>
+
+    <div style='background: #f58dab' class='tile'>
+      CURRENT LOCATION
+    </div>
+
+    <div style='background: #d3a3ff' class='tile'>
+      TAKE A PHOTO
+    </div> -->
+  </div>
+</ion-content>
