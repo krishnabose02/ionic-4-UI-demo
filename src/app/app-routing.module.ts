@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'landing-page', loadChildren: './landing-page/landing-page.module#LandingPagePageModule' },
   { path: 'dummy-module/:id', loadChildren: './dummy-module/dummy-module.module#DummyModulePageModule' },
   { path: 'video-list', loadChildren: './video-list/video-list.module#VideoListPageModule' },
+  { path: 'doc-list', loadChildren: './doc-list/doc-list.module#DocListPageModule' },
 ];
 
 @NgModule({

@@ -33,7 +33,7 @@ shadow = '0 10px 20px #eaaa6230, 0 6px 6px #eaaa623b';
       {
         name: 'read',
         display: 'READ A PDF',
-        page: null,
+        page: '/doc-list',
         icon: 'ios-paper',
         color: '#7cb8e8',
         color_light: '#a4d6ff',
