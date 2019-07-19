@@ -20,7 +20,7 @@ export class DocListPage implements OnInit {
                 private document: DocumentViewer) {
       this.platform.ready().then(() => {
         this.rawData = '';
-        this.readFiles('Download');
+        this.readFiles('document_folder');
       }).catch((err) => {
         this.rawData = 'Files cannot be displayed as platform does not support the operation (' + err + ')';
         // alert('platform not ready');

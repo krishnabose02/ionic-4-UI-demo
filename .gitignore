@@ -32,3 +32,8 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+pushcode.sh
+autoresponder.sh
+gitscript.sh
+
+src/assets/imgs/thinkzone.png

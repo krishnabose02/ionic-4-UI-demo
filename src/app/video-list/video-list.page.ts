@@ -22,7 +22,7 @@ class: string;
               private screenOrientation: ScreenOrientation) {
     this.platform.ready().then(() => {
       this.rawData = '';
-      this.readFiles('thinkzone');
+      this.readFiles('video_folder');
     }).catch((err) => {
       this.rawData = 'Files cannot be displayed as platform does not support the operation (' + err + ')';
       // alert('platform not ready');

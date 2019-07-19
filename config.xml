@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.thinkzone" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ThinkZone demo</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="com.krishnabose.ionicdemo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>UI demo</name>
+    <description>A native video player and document reader demo.</description>
+    <author email="krishna.bose02@gmail.com" href="http://www.github.com/krishnabose02/ionic-4-UI-demo">Krishna Bose</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
